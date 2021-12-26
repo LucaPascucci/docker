@@ -14,7 +14,7 @@ services:
          TZ: ${TIMEZONE}
          WEBTHEME: ${WEB_THEME}
          WEBPASSWORD_FILE: '/run/secrets/pihole_web_password'
-         FTLCONF_REPLY_ADDR4: ${FTLCONF_REPLY_ADDR4}
+         # FTLCONF_REPLY_ADDR4: ${FTLCONF_REPLY_ADDR4}
       secrets:
          - pihole_web_password
 
