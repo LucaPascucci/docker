@@ -1,0 +1,28 @@
+version: '3'
+
+volumes:
+   home-assistant: null
+services:
+   home-assistant:
+
+      container_name: home-assistant
+
+      image: "ghcr.io/home-assistant/home-assistant:stable"
+
+      ports:
+         - "8123:8123/udp"
+         - "8123:8123/tcp"
+
+      environment:
+         TZ: 'Europe/Rome'
+
+      volumes:
+         - home-assistant:/etc/home-assistant
+         - /etc/home-assistant:/config
+         - /etc/home-assistant:/etc/localtime:ro
+
+      restart: unless-stopped
+
+      privileged: true
+
+      network_mode: host
