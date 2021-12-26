@@ -14,7 +14,7 @@ services:
          TZ: ${TIMEZONE}
          WEBTHEME: ${WEB_THEME}
          WEBPASSWORD_FILE: ${WEB_PASSWORD_SECRET_ID}
-         # FTLCONF_REPLY_ADDR4: ${FTLCONF_REPLY_ADDR4}
+         FTLCONF_REPLY_ADDR4: ${FTLCONF_REPLY_ADDR4}
          # Volumes store your data between container upgrades
       volumes:
          # - './etc-pihole:/etc/pihole'
